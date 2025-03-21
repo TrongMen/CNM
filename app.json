@@ -1,0 +1,64 @@
+{
+   "expo": {
+      "name": "Zalo",
+      "slug": "Zalo",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/images/zalo_arc.png",
+      "userInterfaceStyle": "light",
+      "splash": {
+         "image": "./assets/splash.png",
+         "resizeMode": "contain",
+         "backgroundColor": "#447DF4"
+      },
+      "assetBundlePatterns": ["**/*"],
+      "ios": {
+         "bundleIdentifier": "fit.se.zalomobile",
+         "googleServicesFile": "./GoogleService-Info.plist",
+         "supportsTablet": true
+      },
+      "android": {
+         "googleServicesFile": "./google-services.json",
+         "package": "fit.se.zalomobile",
+         "adaptiveIcon": {
+            "foregroundImage": "./assets/images/zalo_arc.png",
+            "backgroundColor": "#ffffff"
+         }
+      },
+      "web": {
+         "favicon": "./assets/images/zalo_arc.png"
+      },
+      "plugins": [
+         "@react-native-firebase/app",
+         "@react-native-firebase/auth",
+         "@notifee/react-native",
+         ["expo-build-properties"],
+         [
+            "expo-image-picker",
+            {
+               "photosPermission": "The app accesses your photos to let you share them with your friends."
+            }
+         ],
+         [
+            "expo-document-picker",
+            {
+               "iCloudContainerEnvironment": "Production"
+            }
+         ],
+         [
+            "expo-camera",
+            {
+               "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+               "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+               "recordAudioAndroid": true
+            }
+         ]
+      ],
+      "extra": {
+         "eas": {
+            "projectId": "b811f300-26a6-45ff-bfbc-9614825f87fe"
+         },
+         "SERVER_HOST": "https://zalo-backend-team-6.onrender.com"
+      }
+   }
+}
